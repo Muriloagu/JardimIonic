@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Projeto Murilo Aguiar - Irrigação</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="ios-bulb-outline" item-start></ion-icon>
+          <ion-label>Iluminação</ion-label>
+      <ion-toggle [(ngModel)]="iluminacao_model.checked" (ionChange)="change_iluminacao()"></ion-toggle>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="ios-cog-outline" item-start></ion-icon>
+          <ion-label>Irrigação</ion-label>
+      <ion-toggle  [(ngModel)]="irrigacao_model.checked" (ionChange)="change_irrigacao()"></ion-toggle>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="ios-thermometer-outline" item-start></ion-icon>
+      <ion-label>Temperatura: {{ temp }}</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="ios-beaker-outline" item-start></ion-icon>
+      <ion-label>Volume de Agua: {{ vol }}</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="md-bulb" item-start></ion-icon>
+      <ion-label>Intensidade do Sol: {{ sol }}</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="md-bulb" item-start></ion-icon>
+      <ion-label>Humidade do Ar: {{ hum }}</ion-label>
+    </ion-item>
+  </ion-card>
+  <button ion-button full (click)="update()">Atualizar</button>
+</ion-content>
